@@ -70,5 +70,5 @@ melt_data   = melt(want_2, id = id_labels, measure.vars = data_labels)
 
 tidy_data   = dcast(melt_data, ID + labels ~ variable, mean)
 ################################################################################################
-write.table(tidy_data, file = "./tidy_data.txt")
+write.table(tidy_data, file = "./tidy_data.txt",  row.name=FALSE)
 ################################################################################################
